@@ -3,5 +3,50 @@ header {
   align-items: center;
   justify-content: center;
   padding: 14px 0;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+  z-index: 1;
+  position: sticky;
+}
+
+main {
+  .location {
+    background-color: $grey-3-color;
+    color: $grey-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15.5px 0;
+    flex-shrink: 0;
+    gap: 17px;
+    z-index: -10;
+    &__exact {
+      font-size: $sm-fs;
+    }
+  }
+  .reservation {
+    background-color: $grey-4-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    &__title {
+      font-family: $roboto;
+      font-size: $lg-fs;
+      font-weight: 700;
+      text-align: center;
+      width: 70%;
+      margin-bottom: 12px;
+    }
+    &__tagline {
+      font-size: $sm-fs;
+      font-weight: 300;
+      text-align: center;
+      width: 80%;
+    }
+    &__button {
+      margin-bottom: 17px;
+      margin-top: 27px;
+    }
+  }
 }

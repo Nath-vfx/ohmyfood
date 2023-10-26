@@ -1,1 +1,42 @@
-./node_modules/*
+# Fichiers et dossiers liés au système d'exploitation et à l'éditeur de texte
+.DS_Store
+Thumbs.db
+*.sublime*
+.idea/
+
+# Dossier de dépendances
+/node_modules
+/vendor
+
+# Fichier de log
+*.log
+
+# Fichiers de configuration spécifiques à l'environnement de développement
+.env
+
+# Fichiers binaires
+*.bin
+*.exe
+*.dmg
+*.iso
+
+# Fichiers dist
+/dist
+
+# Fichiers de cache
+*.cache
+*.pyc
+
+# Fichiers de build
+/Builds
+/Debug
+/Release
+
+# Fichiers par défaut du projet
+/public
+/storage
+
+# Autre
+*.lock
+*.csv
+*.json

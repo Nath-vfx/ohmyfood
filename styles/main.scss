@@ -13,3 +13,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: $roboto;
+}
+
+button {
+  border: inherit;
+  background: $button-gradient;
+  padding: 13px 18.75px;
+  color: white;
+  font-size: $sm-fs;
+  font-weight: 500;
+  border-radius: $lg-br;
+  line-height: normal;
+  transition: all .3s ease-out;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  &:hover {
+    filter: brightness(1.1);
+  }
+}

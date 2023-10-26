@@ -11,6 +11,49 @@ header {
   justify-content: center;
   padding: 14px 0;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  position: sticky;
+}
+
+main .location {
+  background-color: #EAEAEA;
+  color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15.5px 0;
+  flex-shrink: 0;
+  gap: 17px;
+  z-index: -10;
+}
+main .location__exact {
+  font-size: 16px;
+}
+main .reservation {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+main .reservation__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  width: 70%;
+  margin-bottom: 12px;
+}
+main .reservation__tagline {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  width: 80%;
+}
+main .reservation__button {
+  margin-bottom: 17px;
+  margin-top: 27px;
 }
 
 /*Global Styles*/
@@ -18,6 +61,27 @@ header {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  border: inherit;
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 13px 18.75px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 25px;
+  line-height: normal;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+button:hover {
+  filter: brightness(1.1);
 }
 
 /*# sourceMappingURL=main.css.map */

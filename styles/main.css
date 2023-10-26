@@ -3,6 +3,7 @@
 /*Imports*/
 /*colors*/
 /*Texts sizes*/
+/*Desktop texts sizes*/
 /*Borders Radius*/
 /*Fonts Family*/
 main .location {
@@ -47,6 +48,13 @@ main .reservation__button {
 }
 main .fonctionnement {
   padding: 48px 20px 68px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1540px;
 }
 main .fonctionnement__title {
   margin-bottom: 26px;
@@ -54,6 +62,9 @@ main .fonctionnement__title {
 main .fonctionnement__steps {
   counter-reset: list-counter;
   padding-left: 12.5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 main .fonctionnement__steps li::before {
   content: counter(list-counter);
@@ -65,8 +76,11 @@ main .fonctionnement__step {
   border-radius: 20px;
   padding: 28px 38px;
   gap: 25px;
+  height: max-content;
   position: relative;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  min-width: max-content;
 }
 main .fonctionnement__step:not(:last-child) {
   margin-bottom: 24px;
@@ -98,16 +112,24 @@ main .restaurants {
   padding: 54px 20px 66px 20px;
   background-color: #F6F6F6;
 }
+main .restaurants__contents {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 main .restaurants__title {
   margin-bottom: 24px;
 }
 main .restaurants__list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
   gap: 18px;
 }
 main .restaurants__card {
   width: 100%;
+  max-width: 500px;
   list-style: none;
   background-color: white;
   border-radius: 20px;
@@ -148,6 +170,38 @@ main .restaurants__4 .restaurants__img {
   object-position: bottom;
 }
 
+@media (min-width: 768px) {
+  body .reservation__title {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+  body .fonctionnement {
+    padding: 50px;
+  }
+  body .fonctionnement__steps {
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  body .fonctionnement__step {
+    margin-right: 36px;
+  }
+}
+@media (min-width: 1100px) {
+  body .fonctionnement__steps {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  body .fonctionnement__step {
+    width: 100%;
+  }
+}
+@media (max-width: 1060px) {
+  body .restaurants__list {
+    justify-content: center;
+  }
+}
 /*Global Styles*/
 * {
   margin: 0;

@@ -5,16 +5,6 @@
 /*Texts sizes*/
 /*Borders Radius*/
 /*Fonts Family*/
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 0;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
-  z-index: 1;
-  position: sticky;
-}
-
 main .location {
   background-color: #EAEAEA;
   color: #353535;
@@ -106,7 +96,56 @@ main .fonctionnement__step .highlighted {
 }
 main .restaurants {
   padding: 54px 20px 66px 20px;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
+}
+main .restaurants__title {
+  margin-bottom: 24px;
+}
+main .restaurants__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+main .restaurants__card {
+  width: 100%;
+  list-style: none;
+  background-color: white;
+  border-radius: 20px;
+}
+main .restaurants__img {
+  width: 100%;
+  height: 174px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+main .restaurants__content {
+  display: flex;
+  padding: 16px 25px 12px 13px;
+  justify-content: space-between;
+  align-items: center;
+}
+main .restaurants__name {
+  margin-bottom: 5px;
+}
+main .restaurants__like {
+  color: white;
+}
+main .restaurants__like:before {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+main .restaurants__1 .restaurants__img {
+  object-position: bottom center;
+}
+main .restaurants__2 .restaurants__img {
+  object-position: center 60%;
+}
+main .restaurants__3 .restaurants__img {
+  object-position: bottom;
+}
+main .restaurants__4 .restaurants__img {
+  object-position: bottom;
 }
 
 /*Global Styles*/
@@ -118,6 +157,15 @@ main .restaurants {
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+li {
+  list-style: none;
 }
 
 button {
@@ -135,6 +183,37 @@ button {
 }
 button:hover {
   filter: brightness(1.1);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  position: sticky;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px;
+}
+footer .footer__logo h4 {
+  font-family: "Shrikhand", serif;
+  text-transform: lowercase;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+footer .footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .footer__nav li i {
+  width: 15px;
+  margin-right: 11px;
 }
 
 /*# sourceMappingURL=main.css.map */

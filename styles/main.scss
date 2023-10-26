@@ -18,6 +18,15 @@ body {
   font-family: $roboto;
 }
 
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
 button {
   border: inherit;
   background: $button-gradient;
@@ -32,5 +41,42 @@ button {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   &:hover {
     filter: brightness(1.1);
+  }
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+  z-index: 1;
+  position: sticky;
+}
+
+footer {
+  background-color: $grey-color;
+  color: white;
+  padding: 22px 25px;
+  .footer {
+    &__logo h4 {
+      font-family: $shrinkhand;
+      text-transform: lowercase;
+      font-size: $m-fs;
+      margin-bottom: 18px;
+
+    }
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      li {
+        i {
+          width: 15px;
+          margin-right: 11px;
+        }
+      }
+    }
   }
 }

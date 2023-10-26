@@ -55,6 +55,59 @@ main .reservation__button {
   margin-bottom: 17px;
   margin-top: 27px;
 }
+main .fonctionnement {
+  padding: 48px 20px 68px 20px;
+}
+main .fonctionnement__title {
+  margin-bottom: 26px;
+}
+main .fonctionnement__steps {
+  counter-reset: list-counter;
+  padding-left: 12.5px;
+}
+main .fonctionnement__steps li::before {
+  content: counter(list-counter);
+  counter-increment: list-counter;
+}
+main .fonctionnement__step {
+  display: flex;
+  background: #F6F6F6;
+  border-radius: 20px;
+  padding: 28px 38px;
+  gap: 25px;
+  position: relative;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+main .fonctionnement__step:not(:last-child) {
+  margin-bottom: 24px;
+}
+main .fonctionnement__step::before {
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background-color: #9356DC;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .fonctionnement__step i {
+  color: #7E7E7E;
+}
+main .fonctionnement__step .highlighted {
+  color: #9356DC;
+}
+main .restaurants {
+  padding: 54px 20px 66px 20px;
+  background-color: #EAEAEA;
+}
 
 /*Global Styles*/
 * {
@@ -78,7 +131,7 @@ button {
   line-height: normal;
   transition: all 0.3s ease-out;
   cursor: pointer;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 button:hover {
   filter: brightness(1.1);

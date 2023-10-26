@@ -1,0 +1,12 @@
+@function get-list-item-number($element) {
+  $ol: closest($element, ol);
+  @return index($ol > li, $element) + 1;
+}
+
+@mixin list-item-numbers {
+  counter-reset: list-counter;
+  li::before {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+  }
+}

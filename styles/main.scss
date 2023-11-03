@@ -56,6 +56,8 @@ header {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: $grey-color;
   color: white;
   padding: 22px 25px;
@@ -65,7 +67,6 @@ footer {
       text-transform: lowercase;
       font-size: $m-fs;
       margin-bottom: 18px;
-
     }
     &__nav {
       display: flex;
@@ -75,6 +76,28 @@ footer {
         i {
           width: 15px;
           margin-right: 11px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row-reverse !important;
+    align-items: flex-end;
+    padding: 45px 25px 22px 25px;
+    .footer {
+      &__logo h4 {
+        margin-left: 80px;
+        margin-bottom: 0;
+        margin-right: 80px;
+        line-height: 1rem;
+      }
+      &__nav {
+        flex-direction: row !important;
+        li {
+          margin: 0 1rem;
+          line-height: 1rem;
         }
       }
     }

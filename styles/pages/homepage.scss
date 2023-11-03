@@ -160,11 +160,17 @@ main {
 
     &__like {
       color: white;
+      transition: all .2s ease;
 
       &:before {
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: black;
+
       }
+      &:hover {
+        color: $button-gradient;
+      }
+
     }
 
     &__1 .restaurants__img {

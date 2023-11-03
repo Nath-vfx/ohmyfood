@@ -152,10 +152,14 @@ main .restaurants__name {
 }
 main .restaurants__like {
   color: white;
+  transition: all 0.2s ease;
 }
 main .restaurants__like:before {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
+}
+main .restaurants__like:hover {
+  color: linear-gradient(#FF79DA, #9356DC);
 }
 main .restaurants__1 .restaurants__img {
   object-position: bottom center;
@@ -250,6 +254,8 @@ header {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: #353535;
   color: white;
   padding: 22px 25px;
@@ -268,6 +274,27 @@ footer .footer__nav {
 footer .footer__nav li i {
   width: 15px;
   margin-right: 11px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row-reverse !important;
+    align-items: flex-end;
+    padding: 45px 25px 22px 25px;
+  }
+  footer .footer__logo h4 {
+    margin-left: 80px;
+    margin-bottom: 0;
+    margin-right: 80px;
+    line-height: 1rem;
+  }
+  footer .footer__nav {
+    flex-direction: row !important;
+  }
+  footer .footer__nav li {
+    margin: 0 1rem;
+    line-height: 1rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

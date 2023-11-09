@@ -230,6 +230,12 @@ main .restaurants__4 .restaurants__img {
   position: relative;
   margin-top: 50px;
 }
+@media screen and (max-width: 425px) {
+  .restaurant__title {
+    align-self: flex-start;
+    padding-left: 17px;
+  }
+}
 .restaurant__like {
   position: absolute;
   right: -48px;
@@ -277,7 +283,8 @@ main .restaurants__4 .restaurants__img {
 }
 @media screen and (max-width: 425px) {
   .restaurant__menu__lunches {
-    width: 90%;
+    width: 100%;
+    padding: 0 13px;
   }
 }
 .restaurant__menu__lunch {

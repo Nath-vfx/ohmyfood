@@ -1,0 +1,116 @@
+.restaurant-header {
+  position: relative;
+
+  .go-back {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.restaurant {
+  &__back-image {
+    img {
+      height: 375px;
+      width: 100vw;
+      object-fit: cover;
+      z-index: -100;
+      position: relative;
+    }
+  }
+
+  &__title {
+    font-family: Shrikhand, serif;
+    text-align: center;
+    font-size: 28px;
+    position: relative;
+    margin-top: 50px;
+  }
+
+  &__like {
+    position: absolute;
+    right: -48px;
+    bottom: 50%;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    max-width: 1055px;
+    width: 80vw;
+    margin: -50px auto 0 auto;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    @media screen and (max-width: 425px) {
+      width: 100vw;
+    }
+
+    button {
+      margin: 40px auto;
+    }
+
+    &__title {
+      font-family: Roboto, sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 18px;
+      margin-top: 40px;
+
+      &::after {
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: #99E2D0;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+      }
+    }
+
+    &__lunches {
+      width: 60%;
+      @media screen and (max-width: 425px) {
+        width: 90%;
+      }
+    }
+
+    &__lunch {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      background-color: #fff;
+      -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      border-radius: 15px;
+
+      &:not(:last-child) {
+        margin-bottom: 10.5px;
+      }
+
+      &__content {
+        h4 {
+          margin-bottom: 5px;
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 15px;
+        }
+      }
+
+      &__price {
+        font-weight: 700;
+      }
+    }
+  }
+}
+

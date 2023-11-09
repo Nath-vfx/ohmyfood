@@ -206,6 +206,107 @@ main .restaurants__4 .restaurants__img {
     justify-content: center;
   }
 }
+.restaurant-header {
+  position: relative;
+}
+.restaurant-header .go-back {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.restaurant__back-image img {
+  height: 375px;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -100;
+  position: relative;
+}
+.restaurant__title {
+  font-family: Shrikhand, serif;
+  text-align: center;
+  font-size: 28px;
+  position: relative;
+  margin-top: 50px;
+}
+.restaurant__like {
+  position: absolute;
+  right: -48px;
+  bottom: 50%;
+}
+.restaurant__menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  max-width: 1055px;
+  width: 80vw;
+  margin: -50px auto 0 auto;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
+@media screen and (max-width: 425px) {
+  .restaurant__menu {
+    width: 100vw;
+  }
+}
+.restaurant__menu button {
+  margin: 40px auto;
+}
+.restaurant__menu__title {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 18px;
+  margin-top: 40px;
+}
+.restaurant__menu__title::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+.restaurant__menu__lunches {
+  width: 60%;
+}
+@media screen and (max-width: 425px) {
+  .restaurant__menu__lunches {
+    width: 90%;
+  }
+}
+.restaurant__menu__lunch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+}
+.restaurant__menu__lunch:not(:last-child) {
+  margin-bottom: 10.5px;
+}
+.restaurant__menu__lunch__content h4 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.restaurant__menu__lunch__content p {
+  font-size: 15px;
+}
+.restaurant__menu__lunch__price {
+  font-weight: 700;
+}
+
 /*Global Styles*/
 * {
   margin: 0;

@@ -47,14 +47,18 @@ main .reservation__button {
   margin-top: 27px;
 }
 main .fonctionnement {
-  padding: 48px 20px 68px 20px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1540px;
+  padding: 50px 20px;
+  max-width: 1120px;
+}
+main .fonctionnement__content {
+  max-width: 100%;
+  justify-content: flex-start;
 }
 main .fonctionnement__title {
   margin-bottom: 26px;
@@ -78,7 +82,7 @@ main .fonctionnement__step {
   gap: 25px;
   height: max-content;
   position: relative;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   max-width: 100%;
   min-width: max-content;
 }
@@ -113,7 +117,7 @@ main .restaurants {
   background-color: #F6F6F6;
 }
 main .restaurants__contents {
-  max-width: 1440px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 main .restaurants__title {
@@ -126,6 +130,17 @@ main .restaurants__list {
   justify-content: space-between;
   margin: 0 auto;
   gap: 18px;
+}
+@media screen and (max-width: 1024px) {
+  main .restaurants__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 425px) {
+  main .restaurants__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 main .restaurants__card {
   width: 100%;
@@ -179,20 +194,17 @@ main .restaurants__4 .restaurants__img {
     font-size: 40px;
     margin-bottom: 32px;
   }
-  body .fonctionnement {
-    padding: 50px;
-  }
   body .fonctionnement__steps {
     flex-direction: row;
     flex-shrink: 0;
     justify-content: flex-start;
     flex-wrap: wrap;
   }
-  body .fonctionnement__step {
+  body .fonctionnement__step:not(:last-child) {
     margin-right: 36px;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1080px) {
   body .fonctionnement__steps {
     flex-wrap: nowrap;
     justify-content: space-between;

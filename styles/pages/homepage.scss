@@ -46,19 +46,24 @@ main {
   }
 
   .fonctionnement {
-    padding: 48px 20px 68px 20px;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1540px;
+    padding: 50px 20px;
+    max-width: 1120px;
+
     &__content {
+      max-width: 100%;
+      justify-content: flex-start;
     }
+
     &__title {
       margin-bottom: 26px;
     }
+
     &__steps {
       @include list-item-numbers;
       padding-left: 12.5px;
@@ -75,9 +80,10 @@ main {
       gap: 25px;
       height: max-content;
       position: relative;
-      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
       max-width: 100%;
       min-width: max-content;
+
       &:not(:last-child) {
         margin-bottom: 24px;
       }
@@ -113,8 +119,9 @@ main {
   .restaurants {
     padding: 54px 20px 66px 20px;
     background-color: $grey-4-color;
+
     &__contents {
-      max-width: 1440px;
+      max-width: 1080px;
       margin: 0 auto;
     }
 
@@ -129,6 +136,13 @@ main {
       justify-content: space-between;
       margin: 0 auto;
       gap: 18px;
+      @media screen and (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: 425px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
 
     &__card {
@@ -167,6 +181,7 @@ main {
         -webkit-text-stroke-color: black;
 
       }
+
       &:hover {
         color: $button-gradient;
       }
@@ -201,7 +216,6 @@ main {
     }
 
     .fonctionnement {
-      padding: 50px;
 
       &__steps {
         flex-direction: row;
@@ -209,15 +223,18 @@ main {
         justify-content: flex-start;
         flex-wrap: wrap;
       }
-      &__step {
+
+      &__step:not(:last-child) {
         margin-right: 36px;
 
       }
     }
+
     .restaurants {
       &__list {
 
       }
+
       &__card {
 
       }
@@ -225,13 +242,15 @@ main {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1080px) {
   body {
     .fonctionnement {
+
       &__steps {
         flex-wrap: nowrap;
         justify-content: space-between;
       }
+
       &__step {
         width: 100%;
       }

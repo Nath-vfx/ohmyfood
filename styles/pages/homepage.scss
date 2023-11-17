@@ -83,6 +83,15 @@ main {
       box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
       max-width: 100%;
       min-width: max-content;
+      -webkit-transition: all .3s ease-in;
+      -moz-transition: all .3s ease-in;
+      -ms-transition: all .3s ease-in;
+      -o-transition: all .3s ease-in;
+      transition: all .3s ease-in;
+
+      &:hover {
+        transform: scale(1.1);
+      }
 
       &:not(:last-child) {
         margin-bottom: 24px;
@@ -151,6 +160,10 @@ main {
       list-style: none;
       background-color: white;
       border-radius: $m-br;
+      transition: all ease .2s ;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
 
     &__img {

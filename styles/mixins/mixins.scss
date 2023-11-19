@@ -10,3 +10,7 @@
     counter-increment: list-counter;
   }
 }
+
+@mixin add-parent-delay($delay, $parent) {
+  animation-delay: $delay + $parent;
+}

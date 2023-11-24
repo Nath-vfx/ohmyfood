@@ -251,15 +251,16 @@ main .restaurants__name {
   margin-bottom: 5px;
 }
 main .restaurants__like {
-  color: white;
-  transition: all 0.2s ease;
+  color: transparent;
+  transition: color 0.2s ease;
+  cursor: pointer;
 }
 main .restaurants__like:before {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
 main .restaurants__like:hover {
-  color: linear-gradient(#FF79DA, #9356DC);
+  color: #FF79DA;
 }
 main .restaurants__1 .restaurants__img {
   object-position: bottom center;
@@ -332,23 +333,24 @@ main .restaurants__4 .restaurants__img {
   z-index: -100;
   position: relative;
 }
+.restaurant__header {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
 .restaurant__title {
   font-family: Shrikhand, serif;
   text-align: center;
   font-size: 28px;
   position: relative;
-  margin-top: 50px;
 }
 @media screen and (max-width: 425px) {
   .restaurant__title {
     align-self: flex-start;
     padding-left: 17px;
   }
-}
-.restaurant__like {
-  position: absolute;
-  right: -48px;
-  bottom: 50%;
 }
 .restaurant__menu {
   display: flex;
@@ -408,58 +410,58 @@ main .restaurants__4 .restaurants__img {
   animation-fill-mode: forwards;
 }
 .restaurant__menu .entree, .restaurant__menu .entree + ul {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .restaurant__menu .entree li:nth-child(1), .restaurant__menu .entree + ul li:nth-child(1) {
-  animation-delay: 2.2s;
+  animation-delay: 1.2s;
 }
 .restaurant__menu .entree li:nth-child(2), .restaurant__menu .entree + ul li:nth-child(2) {
-  animation-delay: 2.4s;
+  animation-delay: 1.4s;
 }
 .restaurant__menu .entree li:nth-child(3), .restaurant__menu .entree + ul li:nth-child(3) {
-  animation-delay: 2.6s;
+  animation-delay: 1.6s;
 }
 .restaurant__menu .entree li:nth-child(4), .restaurant__menu .entree + ul li:nth-child(4) {
-  animation-delay: 2.8s;
+  animation-delay: 1.8s;
 }
 .restaurant__menu .entree li:nth-child(5), .restaurant__menu .entree + ul li:nth-child(5) {
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 .restaurant__menu .plat, .restaurant__menu .plat + ul {
-  animation-delay: 2.4s;
+  animation-delay: 1.4s;
 }
 .restaurant__menu .plat li:nth-child(1), .restaurant__menu .plat + ul li:nth-child(1) {
-  animation-delay: 2.6s;
+  animation-delay: 1.6s;
 }
 .restaurant__menu .plat li:nth-child(2), .restaurant__menu .plat + ul li:nth-child(2) {
-  animation-delay: 2.8s;
+  animation-delay: 1.8s;
 }
 .restaurant__menu .plat li:nth-child(3), .restaurant__menu .plat + ul li:nth-child(3) {
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 .restaurant__menu .plat li:nth-child(4), .restaurant__menu .plat + ul li:nth-child(4) {
-  animation-delay: 3.2s;
+  animation-delay: 2.2s;
 }
 .restaurant__menu .plat li:nth-child(5), .restaurant__menu .plat + ul li:nth-child(5) {
-  animation-delay: 3.4s;
+  animation-delay: 2.4s;
 }
 .restaurant__menu .dessert, .restaurant__menu .dessert + ul {
-  animation-delay: 2.8s;
+  animation-delay: 1.8s;
 }
 .restaurant__menu .dessert li:nth-child(1), .restaurant__menu .dessert + ul li:nth-child(1) {
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 .restaurant__menu .dessert li:nth-child(2), .restaurant__menu .dessert + ul li:nth-child(2) {
-  animation-delay: 3.2s;
+  animation-delay: 2.2s;
 }
 .restaurant__menu .dessert li:nth-child(3), .restaurant__menu .dessert + ul li:nth-child(3) {
-  animation-delay: 3.4s;
+  animation-delay: 2.4s;
 }
 .restaurant__menu .dessert li:nth-child(4), .restaurant__menu .dessert + ul li:nth-child(4) {
-  animation-delay: 3.6s;
+  animation-delay: 2.6s;
 }
 .restaurant__menu .dessert li:nth-child(5), .restaurant__menu .dessert + ul li:nth-child(5) {
-  animation-delay: 3.8s;
+  animation-delay: 2.8s;
 }
 .restaurant__menu__lunch {
   display: flex;

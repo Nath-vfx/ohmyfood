@@ -218,6 +218,7 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+          max-width: calc(100% - 40px);
         }
 
         p {
@@ -225,6 +226,7 @@
           white-space: nowrap;
           text-overflow: ellipsis;
           font-size: 15px;
+          max-width: calc(100% - 40px);
         }
       }
 

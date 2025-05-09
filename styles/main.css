@@ -8,15 +8,12 @@
 /*Fonts Family*/
 /*Delays*/
 .loader {
-  position: relative;
+  position: absolute;
   width: 64px;
   height: 60px;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -36,7 +33,7 @@
   content: "";
   position: absolute;
   left: 32px;
-  top: -60px;
+  top: 0;
   background: #9356DC;
   width: 24px;
   height: 24px;
@@ -78,7 +75,6 @@
   100% {
     opacity: 0;
     display: none;
-    z-index: -10;
   }
 }
 main .location {
@@ -551,12 +547,14 @@ main .restaurants__4 .restaurants__img {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  max-width: calc(100% - 40px);
 }
 .restaurant__menu__lunch__content p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 15px;
+  max-width: calc(100% - 40px);
 }
 .restaurant__menu__lunch__price {
   position: absolute;

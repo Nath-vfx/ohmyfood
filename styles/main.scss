@@ -59,13 +59,17 @@ header {
   position: sticky;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: $grey-color;
-  color: white;
-  padding: 22px 25px;
   .footer {
+    background-color: $grey-color;
+    color: white;
+    padding: 64px 24px 32px 24px;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      
+      max-width: 1080px;
+      margin: 0 auto;
+    }
     &__logo h4 {
       font-family: $shrinkhand;
       text-transform: lowercase;
@@ -84,13 +88,14 @@ footer {
       }
     }
   }
-}
+
 @media (min-width: 768px) {
-  footer {
-    flex-direction: row-reverse !important;
-    align-items: flex-end;
-    padding: 45px 25px 22px 25px;
-    .footer {
+  .footer {
+      &__content {
+        flex-direction: row-reverse;  
+        justify-content: space-between;
+        align-items: center;
+      }
       &__logo h4 {
         margin-left: 80px;
         margin-bottom: 0;
@@ -104,6 +109,5 @@ footer {
           line-height: 1rem;
         }
       }
-    }
   }
 }

@@ -147,6 +147,7 @@ main .fonctionnement__steps {
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: space-between;
 }
 main .fonctionnement__steps li::before {
   content: counter(list-counter);
@@ -157,12 +158,11 @@ main .fonctionnement__step {
   background: #F6F6F6;
   border-radius: 20px;
   padding: 28px 38px;
+  width: 335px;
   gap: 25px;
   height: max-content;
   position: relative;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  max-width: 100%;
-  min-width: max-content;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
   -ms-transition: all 0.3s ease-in;
@@ -308,33 +308,34 @@ main .restaurants__4 .restaurants__img {
   object-position: bottom;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   body .reservation__title {
     font-size: 40px;
     margin-bottom: 32px;
   }
   body .fonctionnement__steps {
-    flex-direction: row;
-    flex-shrink: 0;
     justify-content: flex-start;
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
   }
-  body .fonctionnement__step:not(:last-child) {
-    margin-right: 36px;
+}
+@media (max-width: 768px) {
+  .fonctionnement__step {
+    width: 100% !important;
+  }
+}
+@media (max-width: 320px) {
+  .fonctionnement__step {
+    gap: 16px !important;
+    padding: 24px 18px !important;
   }
 }
 @media (min-width: 1080px) {
   body .fonctionnement__steps {
     flex-wrap: nowrap;
     justify-content: space-between;
-  }
-  body .fonctionnement__step {
-    width: 100%;
-  }
-}
-@media (max-width: 1060px) {
-  body .restaurants__list {
-    justify-content: center;
   }
 }
 .restaurant-header {
@@ -527,26 +528,39 @@ main .restaurants__4 .restaurants__img {
 .restaurant__menu__lunch:not(:last-child) {
   margin-bottom: 10.5px;
 }
-.restaurant__menu__lunch:hover .restaurant__menu__lunch__check {
-  right: 0;
-}
-.restaurant__menu__lunch:hover .restaurant__menu__lunch__price {
-  transform: translateX(-60px);
-}
 .restaurant__menu__lunch[data-active] .restaurant__menu__lunch__check {
   right: 0;
 }
 .restaurant__menu__lunch[data-active] .restaurant__menu__lunch__price {
   transform: translateX(-60px);
 }
+@media (max-width: 768px) {
+  .restaurant__menu__lunch[data-active] .restaurant__menu__lunch__content h4 {
+    max-width: calc(100% - 100px);
+  }
+  .restaurant__menu__lunch[data-active] .restaurant__menu__lunch__content p {
+    max-width: calc(100% - 100px);
+  }
+}
+.restaurant__menu__lunch__content {
+  width: 100%;
+}
 .restaurant__menu__lunch__content h4 {
   margin-bottom: 5px;
   font-size: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .restaurant__menu__lunch__content p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 15px;
 }
 .restaurant__menu__lunch__price {
+  position: absolute;
+  right: 16px;
   font-weight: 700;
   -webkit-transition: all ease-in-out 0.2s;
   -moz-transition: all ease-in-out 0.2s;
@@ -631,45 +645,49 @@ header {
   position: sticky;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
+.footer {
   background-color: #353535;
   color: white;
-  padding: 22px 25px;
+  padding: 64px 24px 32px 24px;
 }
-footer .footer__logo h4 {
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.footer__logo h4 {
   font-family: "Shrikhand", serif;
   text-transform: lowercase;
   font-size: 18px;
   margin-bottom: 18px;
 }
-footer .footer__nav {
+.footer__nav {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
-footer .footer__nav li i {
+.footer__nav li i {
   width: 15px;
   margin-right: 11px;
 }
 
 @media (min-width: 768px) {
-  footer {
-    flex-direction: row-reverse !important;
-    align-items: flex-end;
-    padding: 45px 25px 22px 25px;
+  .footer__content {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
   }
-  footer .footer__logo h4 {
+  .footer__logo h4 {
     margin-left: 80px;
     margin-bottom: 0;
     margin-right: 80px;
     line-height: 1rem;
   }
-  footer .footer__nav {
+  .footer__nav {
     flex-direction: row !important;
   }
-  footer .footer__nav li {
+  .footer__nav li {
     margin: 0 1rem;
     line-height: 1rem;
   }

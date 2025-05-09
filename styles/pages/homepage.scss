@@ -23,7 +23,6 @@ main {
     align-items: center;
     padding: 40px 0;
 
-
     &__title {
       font-family: $roboto;
       font-size: $lg-fs;
@@ -76,6 +75,7 @@ main {
       display: flex;
       flex-direction: column;
       width: 100%;
+      justify-content: space-between;
     }
 
     &__step {
@@ -83,12 +83,11 @@ main {
       background: $grey-4-color;
       border-radius: $m-br;
       padding: 28px 38px;
+      width: 335px;
       gap: 25px;
       height: max-content;
       position: relative;
       box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-      max-width: 100%;
-      min-width: max-content;
       -webkit-transition: all .3s ease-in;
       -moz-transition: all .3s ease-in;
       -ms-transition: all .3s ease-in;
@@ -254,7 +253,7 @@ main {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   body {
     .reservation {
       &__title {
@@ -262,30 +261,31 @@ main {
         margin-bottom: 32px;
       }
     }
-
     .fonctionnement {
-
       &__steps {
-        flex-direction: row;
-        flex-shrink: 0;
         justify-content: flex-start;
+        gap: 2rem;
+        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
       }
-
-      &__step:not(:last-child) {
-        margin-right: 36px;
-
-      }
     }
+  }
+}
 
-    .restaurants {
-      &__list {
+@media (max-width: 768px) {
+  .fonctionnement {
+    &__step {
+      width: 100% !important;
+    }
+  }
+}
 
-      }
-
-      &__card {
-
-      }
+@media (max-width: 320px) {
+  .fonctionnement {
+    &__step {
+      gap: 16px !important;
+      padding: 24px 18px !important;
     }
   }
 }
@@ -299,19 +299,6 @@ main {
         justify-content: space-between;
       }
 
-      &__step {
-        width: 100%;
-      }
-    }
-  }
-}
-
-@media (max-width: 1060px) {
-  body {
-    .restaurants {
-      &__list {
-        justify-content: center;
-      }
     }
   }
 }

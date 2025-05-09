@@ -168,8 +168,6 @@
       }
     }
 
-
-
     &__lunch {
       display: flex;
       position: relative;
@@ -193,14 +191,6 @@
       &:not(:last-child) {
         margin-bottom: 10.5px;
       }
-      &:hover {
-        .restaurant__menu__lunch__check {
-          right: 0;
-        }
-        .restaurant__menu__lunch__price {
-          transform: translateX(-60px);
-        }
-      }
       &[data-active] {
         .restaurant__menu__lunch__check {
           right: 0;
@@ -208,19 +198,39 @@
         .restaurant__menu__lunch__price {
           transform: translateX(-60px);
         }
+        @media (max-width: 768px) {
+          .restaurant__menu__lunch__content {
+            h4 {
+              max-width: calc(100% - 100px);
+            }
+            p {
+              max-width: calc(100% - 100px);
+            }
+          }
+        }
+
       }
       &__content {
+        width: 100%;
         h4 {
           margin-bottom: 5px;
           font-size: 18px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
 
         p {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
           font-size: 15px;
         }
       }
 
       &__price {
+        position: absolute;
+        right: 16px;
         font-weight: 700;
         -webkit-transition: all ease-in-out .2s;
         -moz-transition: all ease-in-out .2s;

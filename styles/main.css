@@ -121,6 +121,9 @@ main .reservation__button {
   margin-bottom: 17px;
   margin-top: 27px;
 }
+main .reservation__button button:active {
+  transform: scale(0.9);
+}
 main .fonctionnement {
   display: flex;
   flex-direction: column;
@@ -205,6 +208,7 @@ main .restaurants__contents {
 }
 main .restaurants__title {
   margin-bottom: 24px;
+  margin-right: 24px;
 }
 main .restaurants__list {
   display: flex;
@@ -253,16 +257,49 @@ main .restaurants__name {
   margin-bottom: 5px;
 }
 main .restaurants__like {
-  color: transparent;
-  transition: color 0.2s ease;
+  position: relative;
+  width: max-content;
+  height: max-content;
   cursor: pointer;
+  transition: all ease 0.2s;
+  background: none;
+  padding: 0;
 }
-main .restaurants__like:before {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+main .restaurants__like:hover .restaurants__like__default {
+  opacity: 0;
 }
-main .restaurants__like:hover {
-  color: #FF79DA;
+main .restaurants__like:hover .restaurants__like__active {
+  opacity: 1;
+}
+main .restaurants__like:active .restaurants__like__default {
+  opacity: 0;
+}
+main .restaurants__like:active .restaurants__like__active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+main .restaurants__like:focus .restaurants__like__default {
+  opacity: 0;
+}
+main .restaurants__like:focus .restaurants__like__active {
+  opacity: 1;
+}
+main .restaurants__like__default {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+main .restaurants__like__active {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all ease 0.2s;
 }
 main .restaurants__1 .restaurants__img {
   object-position: bottom center;
@@ -347,6 +384,7 @@ main .restaurants__4 .restaurants__img {
   text-align: center;
   font-size: 28px;
   position: relative;
+  margin-right: 24px;
 }
 @media screen and (max-width: 425px) {
   .restaurant__title {

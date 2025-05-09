@@ -408,7 +408,7 @@ main .restaurants__4 .restaurants__img {
 .restaurant__menu__title, .restaurant__menu__title + ul {
   animation-name: fadeIn;
   animation-duration: 0.5s;
-  animation-timing-function: ease-in-out-out;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
 .restaurant__menu .entree, .restaurant__menu .entree + ul {
@@ -482,7 +482,7 @@ main .restaurants__4 .restaurants__img {
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 0.5s;
-  animation-timing-function: ease-in-out-out;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   cursor: pointer;
 }

@@ -105,7 +105,7 @@
     &__title, &__title + ul {
       animation-name: fadeIn;
       animation-duration: 0.5s;
-      animation-timing-function: ease-in-out-out;
+      animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
     }
     .entree, .entree + ul {
@@ -182,7 +182,7 @@
       opacity: 0;
       animation-name: fadeIn;
       animation-duration: 0.5s;
-      animation-timing-function: ease-in-out-out;
+      animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
       cursor: pointer;
       &:not(:last-child) {

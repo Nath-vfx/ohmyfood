@@ -6,7 +6,7 @@
 /*Desktop texts sizes*/
 /*Borders Radius*/
 /*Fonts Family*/
-/*Fonts Weight*/
+/*Delays*/
 .loader {
   position: relative;
   width: 64px;
@@ -314,11 +314,11 @@ main .restaurants__4 .restaurants__img {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  -webkit-transition: all ease-in 0.2s;
-  -moz-transition: all ease-in 0.2s;
-  -ms-transition: all ease-in 0.2s;
-  -o-transition: all ease-in 0.2s;
-  transition: all ease-in 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 .restaurant-header .go-back:hover {
   -webkit-transform: scale(1.3) translateY(-50%);
@@ -408,7 +408,7 @@ main .restaurants__4 .restaurants__img {
 .restaurant__menu__title, .restaurant__menu__title + ul {
   animation-name: fadeIn;
   animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out-out;
   animation-fill-mode: forwards;
 }
 .restaurant__menu .entree, .restaurant__menu .entree + ul {
@@ -467,6 +467,8 @@ main .restaurants__4 .restaurants__img {
 }
 .restaurant__menu__lunch {
   display: flex;
+  position: relative;
+  clip-path: border-box;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
@@ -480,11 +482,18 @@ main .restaurants__4 .restaurants__img {
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out-out;
   animation-fill-mode: forwards;
+  cursor: pointer;
 }
 .restaurant__menu__lunch:not(:last-child) {
   margin-bottom: 10.5px;
+}
+.restaurant__menu__lunch:hover .restaurant__menu__lunch__check {
+  right: 0;
+}
+.restaurant__menu__lunch:hover .restaurant__menu__lunch__price {
+  transform: translateX(-60px);
 }
 .restaurant__menu__lunch__content h4 {
   margin-bottom: 5px;
@@ -495,6 +504,29 @@ main .restaurants__4 .restaurants__img {
 }
 .restaurant__menu__lunch__price {
   font-weight: 700;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+.restaurant__menu__lunch__check {
+  position: absolute;
+  height: 74px;
+  width: 60px;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 @keyframes fadeIn {

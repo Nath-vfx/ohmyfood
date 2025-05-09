@@ -66,6 +66,10 @@
 }
 
 @keyframes disappearing {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
   50% {
     opacity: 1;
   }
@@ -74,7 +78,7 @@
   }
   100% {
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
 }
 main .location {
@@ -500,15 +504,11 @@ main .restaurants__4 .restaurants__img {
 .restaurant__menu__lunch {
   display: flex;
   position: relative;
-  clip-path: border-box;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
   border-radius: 15px;
   opacity: 0;
@@ -517,6 +517,8 @@ main .restaurants__4 .restaurants__img {
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 .restaurant__menu__lunch:not(:last-child) {
   margin-bottom: 10.5px;
@@ -573,7 +575,7 @@ main .restaurants__4 .restaurants__img {
 }
 .restaurant__menu__lunch__check {
   position: absolute;
-  height: 74px;
+  height: 100%;
   width: 60px;
   top: 50%;
   right: -60px;

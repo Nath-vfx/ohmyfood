@@ -200,14 +200,6 @@ main {
       transition: all ease .2s;
       background: none;
       padding: 0;
-      &:hover {
-        .restaurants__like__default {
-          opacity: 0;
-        }
-        .restaurants__like__active {
-          opacity: 1;
-        }
-      }
       &:active {
         .restaurants__like__default {
           opacity: 0;
@@ -217,14 +209,14 @@ main {
           transform: translate(-50%, -50%) scale(0.9);
         }
       }
-      &:focus {
-        .restaurants__like__default {
-          opacity: 0;
-        }
-        .restaurants__like__active {
-          opacity: 1;
-        }
+      &[data-active] {
+      .restaurants__like__default {
+        opacity: 0;
       }
+      .restaurants__like__active {
+        opacity: 1;
+      }
+    }
       &__default {
         position: absolute;
         top: 50%;

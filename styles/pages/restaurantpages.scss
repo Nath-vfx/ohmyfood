@@ -201,7 +201,14 @@
           transform: translateX(-60px);
         }
       }
-
+      &[data-active] {
+        .restaurant__menu__lunch__check {
+          right: 0;
+        }
+        .restaurant__menu__lunch__price {
+          transform: translateX(-60px);
+        }
+      }
       &__content {
         h4 {
           margin-bottom: 5px;

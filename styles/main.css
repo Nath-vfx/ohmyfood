@@ -265,12 +265,6 @@ main .restaurants__like {
   background: none;
   padding: 0;
 }
-main .restaurants__like:hover .restaurants__like__default {
-  opacity: 0;
-}
-main .restaurants__like:hover .restaurants__like__active {
-  opacity: 1;
-}
 main .restaurants__like:active .restaurants__like__default {
   opacity: 0;
 }
@@ -278,10 +272,10 @@ main .restaurants__like:active .restaurants__like__active {
   opacity: 1;
   transform: translate(-50%, -50%) scale(0.9);
 }
-main .restaurants__like:focus .restaurants__like__default {
+main .restaurants__like[data-active] .restaurants__like__default {
   opacity: 0;
 }
-main .restaurants__like:focus .restaurants__like__active {
+main .restaurants__like[data-active] .restaurants__like__active {
   opacity: 1;
 }
 main .restaurants__like__default {
@@ -537,6 +531,12 @@ main .restaurants__4 .restaurants__img {
   right: 0;
 }
 .restaurant__menu__lunch:hover .restaurant__menu__lunch__price {
+  transform: translateX(-60px);
+}
+.restaurant__menu__lunch[data-active] .restaurant__menu__lunch__check {
+  right: 0;
+}
+.restaurant__menu__lunch[data-active] .restaurant__menu__lunch__price {
   transform: translateX(-60px);
 }
 .restaurant__menu__lunch__content h4 {

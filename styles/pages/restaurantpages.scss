@@ -37,6 +37,11 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    @media screen and (max-width: 425px) {
+      width: 100%;
+      padding: 0 1rem;
+      margin-top: 1rem;
+    }
   }
 
   &__title {
@@ -46,8 +51,7 @@
     position: relative;
     margin-right: 24px;
     @media screen and (max-width: 425px) {
-      align-self: flex-start;
-      padding-left: 17px;
+      margin-right: 0;
     }
   }
 

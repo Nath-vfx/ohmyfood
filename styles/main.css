@@ -379,6 +379,13 @@ main .restaurants__4 .restaurants__img {
   align-items: center;
   gap: 20px;
 }
+@media screen and (max-width: 425px) {
+  .restaurant__header {
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+}
 .restaurant__title {
   font-family: Shrikhand, serif;
   text-align: center;
@@ -388,8 +395,7 @@ main .restaurants__4 .restaurants__img {
 }
 @media screen and (max-width: 425px) {
   .restaurant__title {
-    align-self: flex-start;
-    padding-left: 17px;
+    margin-right: 0;
   }
 }
 .restaurant__menu {

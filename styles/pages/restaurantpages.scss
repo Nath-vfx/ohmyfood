@@ -208,7 +208,16 @@
             }
           }
         }
-
+      }
+      @media (min-width: 1024px) {
+        &:hover {
+          .restaurant__menu__lunch__check {
+            right: 0;
+          }
+          .restaurant__menu__lunch__price {
+            transform: translateX(-60px);
+          }
+        }
       }
       &__content {
         width: 100%;

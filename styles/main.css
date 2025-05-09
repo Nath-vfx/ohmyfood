@@ -538,6 +538,14 @@ main .restaurants__4 .restaurants__img {
     max-width: calc(100% - 100px);
   }
 }
+@media (min-width: 1024px) {
+  .restaurant__menu__lunch:hover .restaurant__menu__lunch__check {
+    right: 0;
+  }
+  .restaurant__menu__lunch:hover .restaurant__menu__lunch__price {
+    transform: translateX(-60px);
+  }
+}
 .restaurant__menu__lunch__content {
   width: 100%;
 }
@@ -670,11 +678,12 @@ header {
   margin-right: 11px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer__content {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
   }
   .footer__logo h4 {
     margin-left: 80px;
